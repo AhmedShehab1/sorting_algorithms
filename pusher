@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo -e "Enter commit message :"
+read message
+
+echo "Pulling the lastest changes:"
+git pull
+
+echo
+echo "Adding & committing the new changes:"
+git add .
+git commit -m "${message}"
+
+echo
+echo "Pushing the new changes:"
+git push
