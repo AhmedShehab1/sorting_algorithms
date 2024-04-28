@@ -13,7 +13,7 @@ This project considers some of these algorithms including:
 
 	1. Bubble sort
  	2. Insertion sort
-  	3. Merge sort
+  	3. Selection sort
    	4. Quick sort
 
 
@@ -31,5 +31,5 @@ In this project, an algorithm is descriped in three big O notations:
 
 This project is meant to be done by a group of two students:
 
+	- Ahmed Shehab
 	- Mazen Atlam
-	- Mario Raafat
