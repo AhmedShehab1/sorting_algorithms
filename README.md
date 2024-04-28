@@ -34,4 +34,4 @@ In this project, an algorithm is descriped in three big O notations:
 This project is meant to be done by a group of two students:
 
 	- Ahmed Shehab
-	- Mazen Atlam
+	- Mazen Atlam :smile:
