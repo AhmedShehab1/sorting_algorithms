@@ -14,7 +14,8 @@ This project considers some of these algorithms including:
 	1. Bubble sort
  	2. Insertion sort
   	3. Selection sort
-   	4. Quick sort
+   	4. Quick sort ( Using Lomuto partition Scheme )
+   	5. Merge sort
 
 
 ## Big O notation
@@ -29,7 +30,8 @@ In this project, an algorithm is descriped in three big O notations:
 	c. in the worst case
 
 
+<hr />
 This project is meant to be done by a group of two students:
 
 	- Ahmed Shehab
-	- Mazen Atlam
+	- Mazen Atlam 😄
