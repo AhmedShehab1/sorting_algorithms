@@ -30,6 +30,7 @@ In this project, an algorithm is descriped in three big O notations:
 	c. in the worst case
 
 
+<hr />
 This project is meant to be done by a group of two students:
 
 	- Ahmed Shehab
