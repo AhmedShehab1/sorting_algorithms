@@ -28,4 +28,9 @@ void insertion_sort_list(listint_t **list);
 /*_Task2_*/
 void selection_sort(int *array, size_t size);
 
+/*_Task7_*/
+void Merge_Sorting(int arr[], int l, int r);
+void merge(int arr[], int l, int m, int r);
+void merge_sort(int *array, size_t size);
+
 #endif /*_sort.h_*/
