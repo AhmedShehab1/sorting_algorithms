@@ -14,7 +14,7 @@ This project considers some of these algorithms including:
 	1. Bubble sort
  	2. Insertion sort
   	3. Selection sort
-   	4. Quick sort
+   	4. Quick sort ( Using Lomuto partition Scheme )
    	5. Merge sort
 
 
