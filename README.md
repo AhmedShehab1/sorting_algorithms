@@ -15,7 +15,7 @@ This project considers some of these algorithms including:
  	2. Insertion sort
   	3. Selection sort
    	4. Quick sort
-    	5. Merge sort
+   	5. Merge sort
 
 
 ## Big O notation
