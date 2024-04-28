@@ -14,8 +14,8 @@ void merge(int arr[], int l, int m, int r)
 	int n1 = m - l + 1;
 	int n2 = r - m;
 	int n = r - l;
-	int *arr1 = malloc(sizeof(int) * n1);
-	int *arr2 = malloc(sizeof(int) * n2);
+	int *arr1 = (int *) malloc(sizeof(int) * n1);
+	int *arr2 = (int *) malloc(sizeof(int) * n2);
 	size_t j = 0, i = 0, k;
 
 	for (i = 0; i < n1; i++)
