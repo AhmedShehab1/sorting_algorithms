@@ -12,6 +12,8 @@ void quick_sort(int *array, size_t size)
 	int  pivotNewIndex;
 	static int low = 0, high, i = 0;
 
+	if (size < 2)
+		return;
 	if (i == 0)
 		high = size - (++i);
 	if (low < high)
