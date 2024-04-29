@@ -10,7 +10,7 @@
 void quick_sort(int *array, size_t size)
 {
 	int  pivotNewIndex;
-	static int low = 0, high, i = 0;
+	static int low, high, i;
 
 	if (size < 2)
 		return;
