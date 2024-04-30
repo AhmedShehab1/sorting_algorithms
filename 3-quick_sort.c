@@ -41,12 +41,13 @@ int partition(int *array, int low, int high, int size)
 	int pivot, index, i, temp;
 
 	pivot = array[high];
-	index = low;
+	index = low - 1;
 
 	for (i = low; i < high; i++)
 	{
 		if (array[i] < pivot)
 		{
+			index++;
 			if (index != i)
 			{
 				temp = array[i];
@@ -54,16 +55,15 @@ int partition(int *array, int low, int high, int size)
 				array[index] = temp;
 				print_array(array, size);
 			}
-			index++;
 		}
 	}
-	if (array[index] != array[high])
+	if (array[index + 1] != array[high])
 	{
-		temp = array[index];
-		array[index] = array[high];
+		temp = array[index + 1];
+		array[index + 1] = array[high];
 		array[high] = temp;
 		print_array(array, size);
 	}
 
-	return (index);
+	return (index + 1);
 }
