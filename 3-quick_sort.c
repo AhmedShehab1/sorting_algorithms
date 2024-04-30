@@ -1,5 +1,17 @@
 #include "sort.h"
 
+void quick_sort_2(int *array, size_t size, int low, int high)
+{
+	int pivotNewIndex;
+
+	if (high > low)
+	{
+		pivotNewIndex = partition(array, low, high, size);
+		quick_sort_2(array, size, low, pivotNewIndex - 1);
+		quick_sort_2(array, size, pivotNewIndex + 1, high);
+	}
+}
+
 /**
  * quick_sort - Sorts Array Using Quick Sort
  * Algorithm (Lomuto partition scheme)
@@ -9,25 +21,12 @@
 */
 void quick_sort(int *array, size_t size)
 {
-	int  pivotNewIndex;
-	static int low = 0, high, i = 0;
+	if (!array || size < 2)
+		return;
 
-	if (i == 0)
-		high = size - (++i);
-	if (low < high)
-	{
-		pivotNewIndex = partition(array, low, high, size);
-		if (pivotNewIndex - 1 < low)
-		{
-			low = pivotNewIndex + 1;
-		}
-		else if (high < pivotNewIndex  + 1)
-		{
-			high = pivotNewIndex - 1;
-		}
-		quick_sort(array, size);
-	}
+	quick_sort_2(array, size, 0, size - 1);
 }
+
 /**
  * partition - Lomuto Partition Scheme
  * @array: Array To Be Sorted
@@ -42,29 +41,29 @@ int partition(int *array, int low, int high, int size)
 	int pivot, index, i, temp;
 
 	pivot = array[high];
-	index = low - 1;
+	index = low;
 
-	for (i = 0; i < high; i++)
+	for (i = low; i < high; i++)
 	{
-		if (array[i] <= pivot)
+		if (array[i] < pivot)
 		{
-			index++;
-
-			temp = array[i];
-			array[i] = array[index];
-			array[index] = temp;
-			if (array[index] != array[i])
+			if (index != i)
 			{
+				temp = array[i];
+				array[i] = array[index];
+				array[index] = temp;
 				print_array(array, size);
 			}
+			index++;
 		}
 	}
-
-	temp = array[index + 1];
-	array[index + 1] = array[high];
-	array[high] = temp;
-	if (array[index + 1] != array[high])
+	if (array[index] != array[high])
+	{
+		temp = array[index];
+		array[index] = array[high];
+		array[high] = temp;
 		print_array(array, size);
+	}
 
-	return (index + 1);
+	return (index);
 }
