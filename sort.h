@@ -32,8 +32,8 @@ void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 
 /*_Task3_*/
-void quick_sort_2(int *array, size_t size, int low, int high);
+void lomuto_scheme(int *array, size_t size, int start, int end);
+size_t partition(int *array, size_t size, int start, int end);
 void quick_sort(int *array, size_t size);
-int partition(int *array, int low, int high, int size);
 
 #endif /*_sort.h_*/
